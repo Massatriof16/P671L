@@ -17,8 +17,8 @@ on init
     write /config/usb_gadget/g1/bcdUSB 0x0200
     write /config/usb_gadget/g1/os_desc/use 1
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
-    write /config/usb_gadget/g1/strings/0x409/manufacturer "Realme"
-    write /config/usb_gadget/g1/strings/0x409/product "Realme C21Y"
+    write /config/usb_gadget/g1/strings/0x409/manufacturer "Itel"
+    write /config/usb_gadget/g1/strings/0x409/product "Itel P671L"
     mkdir /config/usb_gadget/g1/functions/mass_storage.0
     mkdir /config/usb_gadget/g1/functions/ffs.adb
     mkdir /config/usb_gadget/g1/functions/ffs.fastboot
