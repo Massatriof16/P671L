@@ -1,0 +1,4 @@
+getprop | grep init.svc
+getprop | grep ro.hardware
+logcat -d > /cache/log.txt
+cp /tmp/recovery.log /cache

@@ -1,0 +1,70 @@
+<!--
+    Input:
+        vendor/transsion/spd/trancare/hardware/interfaces/device_framework_matrix_tranlog.xml
+        vendor/transsion/spd/trancare/hardware/interfaces/device_framework_matrix_tranlogconfig.xml
+        vendor/transsion/spd/trancare/hardware/interfaces/device_framework_matrix_trandatacenter.xml
+        vendor/transsion/sdd/vendortne/1.0/device_framework_matrix_tneengine.xml
+        vendor/transsion/spd/uas/performance/sched/1.0/trans_sched_fwk.xml
+        vendor/transsion/tranfac/TranfacSys/aidl/device_framework_matrix_tranfacaidl.xml
+-->
+<compatibility-matrix version="7.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.tne.tneengine</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITne</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.trandatacenter</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITranDataCenter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.transsion.hardware.tranfacaidl</name>
+        <interface>
+            <name>ITranfacAidl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.tranlog</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITranLog</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.hardware.tranlogconfig</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITranLogConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.transsion.performance.sched</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITransSched</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <sepolicy>
+        <kernel-sepolicy-version>30</kernel-sepolicy-version>
+        <sepolicy-version>29.0</sepolicy-version>
+        <sepolicy-version>30.0</sepolicy-version>
+        <sepolicy-version>31.0</sepolicy-version>
+        <sepolicy-version>32.0</sepolicy-version>
+        <sepolicy-version>33.0</sepolicy-version>
+        <sepolicy-version>34.0</sepolicy-version>
+    </sepolicy>
+    <avb>
+        <vbmeta-version>1.0</vbmeta-version>
+    </avb>
+</compatibility-matrix>

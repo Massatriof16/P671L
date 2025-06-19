@@ -1,0 +1,141 @@
+/vendor/lib/modules/audio_mem.ko:
+/vendor/lib/modules/sc27xx_adc.ko:
+/vendor/lib/modules/sprd_audcp_boot.ko: /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/pinctrl-sprd-qogirl6.ko: /vendor/lib/modules/pinctrl-sprd.ko
+/vendor/lib/modules/goodix_fp.ko: /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/cpufreq_userspace.ko:
+/vendor/lib/modules/gpio.ko: /vendor/lib/modules/core.ko
+/vendor/lib/modules/sprd_audcp_dvfs.ko: /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/mali_kbase.ko: /vendor/lib/modules/unisoc_mm_emem.ko
+/vendor/lib/modules/agdsp_pd.ko:
+/vendor/lib/modules/sprd-vsp-pw-domain.ko:
+/vendor/lib/modules/cma_heap.ko: /vendor/lib/modules/ion_ipc_trusty.ko
+/vendor/lib/modules/tran_fpsmgr.ko:
+/vendor/lib/modules/sprd_coresight-funnel.ko: /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/unisoc_gnss_dbg.ko:
+/vendor/lib/modules/unisoc_gnss_pmnotify_ctl.ko: /vendor/lib/modules/unisoc_gnss_common_ctl_all.ko /vendor/lib/modules/unisoc_wcn_bsp.ko
+/vendor/lib/modules/unisoc_binder.ko:
+/vendor/lib/modules/thermal-generic-adc.ko:
+/vendor/lib/modules/sprd_aphang.ko: /vendor/lib/modules/unisoc_last_kmsg.ko
+/vendor/lib/modules/switch_class.ko:
+/vendor/lib/modules/silead_fp.ko: /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/ims_bridge.ko:
+/vendor/lib/modules/sprd_fm.ko: /vendor/lib/modules/unisoc_wcn_bsp.ko
+/vendor/lib/modules/snd-soc-sprd-pdm-r2p0.ko: /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/sprd_coresight-apetb-main.ko: /vendor/lib/modules/sprd_coresight-apetb-ctrl.ko /vendor/lib/modules/sprd_coresight-etm4x.ko /vendor/lib/modules/sprd_coresight-tmc.ko /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/unisoc-iommu.ko:
+/vendor/lib/modules/sprd_apipe.ko:
+/vendor/lib/modules/sprd-dma.ko:
+/vendor/lib/modules/sprd_wlan_combo.ko: /vendor/lib/modules/cfg80211.ko /vendor/lib/modules/unisoc_wcn_bsp.ko
+/vendor/lib/modules/flash_ic_ocp8137.ko: /vendor/lib/modules/sprd_flash_drv.ko
+/vendor/lib/modules/transsion_trancare.ko:
+/vendor/lib/modules/turbo_engine.ko: /vendor/lib/modules/tran_turbo.ko /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/transsion_resmonitor.ko:
+/vendor/lib/modules/snd-soc-sprd-card.ko: /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko
+/vendor/lib/modules/sprd_coresight-apetb-ctrl.ko: /vendor/lib/modules/sprd_coresight-etm4x.ko /vendor/lib/modules/sprd_coresight-tmc.ko /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/audio-dsp-dump.ko: /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/sc27xx-poweroff.ko:
+/vendor/lib/modules/tran_charger.ko: /vendor/lib/modules/sprd-charger-manager.ko /vendor/lib/modules/sprd_battery_info.ko /vendor/lib/modules/tran_charge_class.ko /vendor/lib/modules/transsion_trancare.ko /vendor/lib/modules/extcon-usb-gpio.ko /vendor/lib/modules/sc27xx_typec.ko /vendor/lib/modules/sprd_tcpm.ko /vendor/lib/modules/switch_class.ko
+/vendor/lib/modules/audio-pipe.ko: /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/tran_monitor.ko: /vendor/lib/modules/tran_turbo.ko /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/snd-soc-fs1599.ko:
+/vendor/lib/modules/sprd_flash_drv.ko:
+/vendor/lib/modules/nvt_nt36xxx_spi_ts.ko: /vendor/lib/modules/trusty-tui.ko
+/vendor/lib/modules/unisoc_gnss_common_ctl_all.ko: /vendor/lib/modules/unisoc_wcn_bsp.ko
+/vendor/lib/modules/snd-soc-sprd-codec-sc2730-power.ko: /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko
+/vendor/lib/modules/sprdbt_tty.ko: /vendor/lib/modules/unisoc_wcn_bsp.ko
+/vendor/lib/modules/unisoc_multi_control.ko:
+/vendor/lib/modules/ledtrig-pattern.ko:
+/vendor/lib/modules/sprd_map.ko:
+/vendor/lib/modules/sc27xx_typec.ko: /vendor/lib/modules/sprd_tcpm.ko /vendor/lib/modules/switch_class.ko
+/vendor/lib/modules/sprd_uid.ko:
+/vendor/lib/modules/snd-soc-sprd-vbc-v4.ko: /vendor/lib/modules/mcdt_hw_r2p0.ko /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/sprd_cpu_cooling.ko:
+/vendor/lib/modules/sprd-gsp.ko: /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/unisoc_mm_reclaim.ko:
+/vendor/lib/modules/sprd_camera.ko: /vendor/lib/modules/sprd_sensor.ko /vendor/lib/modules/sprd_camsys_pw_domain.ko /vendor/lib/modules/sprd-dmabuf.ko /vendor/lib/modules/sprd_flash_drv.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/tran_turbo.ko: /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/unisoc_userlog.ko:
+/vendor/lib/modules/leds-sc27xx-bltc.ko:
+/vendor/lib/modules/aw87xxxpa.ko:
+/vendor/lib/modules/tran_charge_class.ko:
+/vendor/lib/modules/kts_sync.ko:
+/vendor/lib/modules/focaltech_ft8756_spi_ts.ko: /vendor/lib/modules/trusty-tui.ko
+/vendor/lib/modules/spi-sprd.ko:
+/vendor/lib/modules/mcdt_hw_r2p0.ko:
+/vendor/lib/modules/pinctrl-sprd.ko:
+/vendor/lib/modules/snd-soc-sprd-dummy-codec.ko:
+/vendor/lib/modules/sprd_camsys_pw_domain.ko:
+/vendor/lib/modules/sprd-drm.ko: /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/sprd_coresight-etm4x.ko: /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/adaptive-ts.ko: /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/sprd_coresight-replicator.ko: /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/tran-bias.ko:
+/vendor/lib/modules/extcon-usb-gpio.ko: /vendor/lib/modules/switch_class.ko
+/vendor/lib/modules/sprd_pmic_wdt.ko:
+/vendor/lib/modules/sprd_sensor.ko: /vendor/lib/modules/sprd_camsys_pw_domain.ko
+/vendor/lib/modules/microarray_fp.ko:
+/vendor/lib/modules/fpc_fp.ko: /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/tranbootprof.ko:
+/vendor/lib/modules/sprd_cp_dvfs.ko:
+/vendor/lib/modules/ums9230_serdes.ko: /vendor/lib/modules/mipiserdes_base.ko
+/vendor/lib/modules/phy-sprd-commonphy.ko:
+/vendor/lib/modules/sc8950-charger.ko: /vendor/lib/modules/sprd-charger-manager.ko /vendor/lib/modules/sprd_battery_info.ko /vendor/lib/modules/tran_charge_class.ko /vendor/lib/modules/transsion_trancare.ko /vendor/lib/modules/sprd_tcpm.ko
+/vendor/lib/modules/sprd_pmic_syscon.ko:
+/vendor/lib/modules/sc27xx_tsensor_thermal.ko:
+/vendor/lib/modules/omnivision_td4160.ko: /vendor/lib/modules/adaptive-ts.ko /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/phy-sprd-qogirl6.ko: /vendor/lib/modules/sprd-bc1p2.ko /vendor/lib/modules/phy-sprd-commonphy.ko /vendor/lib/modules/sprd_usbpinmux.ko
+/vendor/lib/modules/audio_sipc.ko: /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/zsmalloc.ko:
+/vendor/lib/modules/kprobe_block.ko:
+/vendor/lib/modules/sprd_cpp.ko: /vendor/lib/modules/sprd_camsys_pw_domain.ko /vendor/lib/modules/sprd-dmabuf.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/unisoc_wcn_bsp.ko:
+/vendor/lib/modules/pinctrl.ko: /vendor/lib/modules/core.ko
+/vendor/lib/modules/fpsensor_fp.ko: /vendor/lib/modules/tran_hwinfo.ko
+/vendor/lib/modules/musb_sprd.ko: /vendor/lib/modules/musb_hdrc.ko /vendor/lib/modules/phy-sprd-commonphy.ko /vendor/lib/modules/sprd_usbpinmux.ko /vendor/lib/modules/sc27xx_typec.ko /vendor/lib/modules/sprd_tcpm.ko /vendor/lib/modules/switch_class.ko
+/vendor/lib/modules/sdcard_debug.ko:
+/vendor/lib/modules/unisoc_mm_emem.ko:
+/vendor/lib/modules/cfg80211.ko:
+/vendor/lib/modules/tran_mm_collect.ko:
+/vendor/lib/modules/sprd_audio_usb_offload.ko: /vendor/lib/modules/musb_hdrc.ko
+/vendor/lib/modules/system_heap.ko: /vendor/lib/modules/unisoc_mm_emem.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/vpu.ko: /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/sprd-charger-manager.ko: /vendor/lib/modules/sprd_battery_info.ko /vendor/lib/modules/tran_charge_class.ko /vendor/lib/modules/transsion_trancare.ko /vendor/lib/modules/sprd_tcpm.ko
+/vendor/lib/modules/tnek.ko:
+/vendor/lib/modules/core.ko:
+/vendor/lib/modules/musb_hdrc.ko:
+/vendor/lib/modules/snd-soc-sprd-codec-sc2730-power-dev.ko:
+/vendor/lib/modules/sprd-dmaengine-pcm.ko: /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko /vendor/lib/modules/audio_mem.ko
+/vendor/lib/modules/dmc_drv.ko:
+/vendor/lib/modules/sprd_coresight-tmc.ko: /vendor/lib/modules/sprd_coresight.ko
+/vendor/lib/modules/sprd_usbpinmux.ko:
+/vendor/lib/modules/sprd-compr-2stage-dma.ko: /vendor/lib/modules/mcdt_hw_r2p0.ko /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/snd-soc-sprd-codec-sc2730.ko: /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko
+/vendor/lib/modules/sprd_ddr_dvfs.ko:
+/vendor/lib/modules/kprobe_iowait.ko:
+/vendor/lib/modules/sprd_tcpm.ko:
+/vendor/lib/modules/tran_hwinfo.ko:
+/vendor/lib/modules/tran_auto_test.ko:
+/vendor/lib/modules/sprd-bc1p2.ko:
+/vendor/lib/modules/sc27xx_fuel_gauge.ko: /vendor/lib/modules/sprd-charger-manager.ko /vendor/lib/modules/sprd_battery_info.ko /vendor/lib/modules/tran_charge_class.ko /vendor/lib/modules/transsion_trancare.ko /vendor/lib/modules/sprd_tcpm.ko
+/vendor/lib/modules/snd-soc-sprd-vbc-fe.ko: /vendor/lib/modules/snd-soc-sprd-vbc-v4.ko /vendor/lib/modules/mcdt_hw_r2p0.ko /vendor/lib/modules/snd-soc-sprd-card.ko /vendor/lib/modules/snd-soc-fs1599.ko /vendor/lib/modules/aw87xxxpa.ko /vendor/lib/modules/audio_sipc.ko /vendor/lib/modules/audio_mem.ko /vendor/lib/modules/agdsp_pd.ko
+/vendor/lib/modules/trusty-tui.ko:
+/vendor/lib/modules/sysdumpdb_switch.ko:
+/vendor/lib/modules/mmdvfs.ko: /vendor/lib/modules/sprd_camsys_pw_domain.ko
+/vendor/lib/modules/sprd-platform-pcm-routing.ko:
+/vendor/lib/modules/mipiserdes_base.ko:
+/vendor/lib/modules/trans_sched.ko:
+/vendor/lib/modules/sprd_battery_info.ko:
+/vendor/lib/modules/sprd-dmabuf.ko:
+/vendor/lib/modules/snd-soc-sprd-pa-ucp1301.ko:
+/vendor/lib/modules/unisoc_last_kmsg.ko:
+/vendor/lib/modules/pwm-sprd.ko:
+/vendor/lib/modules/sprd_trng.ko:
+/vendor/lib/modules/apsys-dvfs.ko:
+/vendor/lib/modules/zram.ko: /vendor/lib/modules/tran_mm_collect.ko /vendor/lib/modules/zsmalloc.ko /vendor/lib/modules/transsion_trancare.ko /vendor/lib/modules/unisoc_mm_emem.ko
+/vendor/lib/modules/jpg.ko: /vendor/lib/modules/sprd_camsys_pw_domain.ko /vendor/lib/modules/unisoc-iommu.ko
+/vendor/lib/modules/sc27xx_pd.ko: /vendor/lib/modules/sprd_tcpm.ko
+/vendor/lib/modules/ion_ipc_trusty.ko:
+/vendor/lib/modules/sprd_coresight.ko:
+/vendor/lib/modules/sc27xx-vibra.ko:
+/vendor/lib/modules/chipone_icnl99xx.ko: /vendor/lib/modules/adaptive-ts.ko /vendor/lib/modules/sprd-drm.ko /vendor/lib/modules/apsys-dvfs.ko /vendor/lib/modules/tran_hwinfo.ko /vendor/lib/modules/sprd-gsp.ko /vendor/lib/modules/unisoc-iommu.ko
