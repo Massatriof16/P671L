@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-DEVICE_PATH := device/itel/P671LN
+DEVICE_PATH := device/itel/P671L
 
 
 # For building with minimal manifest
@@ -38,7 +38,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := itel-P671LN
+TARGET_OTA_ASSERT_DEVICE := itel-P671L
 
 
 # Architecture
@@ -57,7 +57,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := itel-P671LN
+TARGET_BOOTLOADER_BOARD_NAME := itel-P671L
 TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_IMAGE_NAME = Image
 
