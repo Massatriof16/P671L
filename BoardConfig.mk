@@ -6,7 +6,7 @@
 #
 DEVICE_PATH := device/itel/P671L
 
-
+TARGET_NO_KERNEL := true
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
