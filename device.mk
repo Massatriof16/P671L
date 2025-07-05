@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
     
 
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
+
  
 # Boot control HAL
 PRODUCT_PACKAGES += \
