@@ -36,7 +36,6 @@ PRODUCT_PACKAGES += \
 
     
 
-TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
 
  
 # Boot control HAL
@@ -79,8 +78,8 @@ PRODUCT_PACKAGES += \
     libsnapshot
     
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 33
-PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_SHIPPING_API_LEVEL := 34
+PRODUCT_TARGET_VNDK_VERSION := 34
 
 # A/B
 

@@ -17,6 +17,10 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 RELAX_USES_LIBRARY_CHECK=true
 TARGET_RECOVERY_DEVICE_MODULES += libsnapshot
 
+TW_LOAD_VENDOR_MODULES := "omnivision_td4160.ko chipone_icnl99xx.ko adaptive-ts.ko"
+TW_LOAD_VENDOR_BOOT_MODULES := true
+
+
 # A/B
 # A/B support
 AB_OTA_UPDATER := true

@@ -1,0 +1,159 @@
+#add for board init.rc for recovery mode
+import /init.recovery.common.rc
+
+
+on fs
+start prepdecrypt 
+
+service prepdecrypt /system/bin/prepdecrypt.sh
+oneshot
+disabled
+user root
+group root
+seclabel u:r:recovery:s0
+
+service keystore2 /system/bin/keystore2 /data/misc/keystore
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymint-2-0 /system/bin/android.hardware.security.keymint@2.0-unisoc.service.trusty
+    user root
+    group root drmrpc
+    disabled
+seclabel u:r:recovery:s0
+
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.trusty
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+    
+on property:vendor.sys.listener.registered=true
+start keymint-2-0
+start gatekeeper-1-0
+
+on property:crypto.ready=1 && property:ro.crypto.state=encrypted
+start keymint-2-0
+start gatekeeper-1-0
+
+on property:crypto.ready=1 && property:hwservicemanager.ready=true
+ start keymint-2-0
+start gatekeeper-1-0
+
+on property:ro.crypto.state=unsupported || property:ro.crypto.state=unencrypted || property:twrp.decrypt.done=true
+stop keymint-2-0
+stop gatekeeper-1-0
+
+on boot
+#install_keyring
+start keymint-2-0
+start gatekeeper-1-0
+start boot-hal-1-2
+start health-hal-2-1
+
+ 
+ #### THIS IS FROM INIT RECOVERY COMMMON
+
+service healthd /system/bin/healthd -r
+    critical
+    seclabel u:r:healthd:s0
+
+service create_splloader_dual_slot_byname_path /system/bin/create_splloader_dual_slot_byname_path.sh
+    user root
+    group root system
+    disabled
+    oneshot
+    seclabel u:r:create_spl_link_recovery:s0
+
+service vendor.mlogservice /vendor/bin/mlogservice
+    class main
+    user shell
+    group system root
+
+
+on init
+    # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
+    write /sys/fs/selinux/checkreqprot 0
+    start healthd
+    start create_splloader_dual_slot_byname_path
+
+    export PATH /sbin:/system/bin:/vendor/bin
+    export SECONDARY_STORAGE /storage/sdcard0
+
+    mkdir /storage
+    mkdir /storage/sdcard1
+    mkdir /storage/sdcard0
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /system/etc/bluetooth /etc/bluetooth
+
+    mkdir /systeminfo 0777 system system
+
+    loglevel 7
+
+    chown system root /proc/mdbg/assert
+    chown system root /proc/mdbg/wdtirq
+    chown system root /proc/mdbg/at_cmd
+    chown system root /proc/mdbg/loopcheck
+
+    chmod 760 /proc/mdbg/assert
+    chmod 760 /proc/mdbg/wdtirq
+    chmod 760 /proc/mdbg/at_cmd
+    chmod 760 /proc/mdbg/loopcheck
+
+    chown system root /proc/cpwcn/wdtirq
+    chmod 766 /proc/cpwcn/wdtirq
+    
+    
+on fs
+    #mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
+    mkdir /data/misc/bluetooth 0770 system system
+
+on post-fs-data
+    # We chown/chmod /data again so because mount is run as root + defaults
+    chown system system /data
+    chmod 0771 /data
+    # We restorecon /data in case the userdata partition has been reset.
+    restorecon /data
+    mkdir /data/misc 01771 system misc
+    #mkdir /data/misc/bluedroid 0770 bluetooth net_bt_stack
+    mkdir /data/misc/bluetooth 0770 system system
+    copy /system/etc/bluetooth/bt_stack.conf /data/misc/bluedroid/bt_stack.conf
+    chown bluetooth system /data/misc/bluedroid/bt_stack.conf
+    chmod 0640 /data/misc/bluedroid/bt_stack.conf
+
+    #add wifi
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+    mkdir /data/system 0770 system system
+    mkdir /etc/wifi 0770 wifi wifi
+    write /data/vendor/wifi/fwpath sta_mode
+    chmod 660 /data/vendor/wifi/fwpath
+    chown wifi wifi /data/vendor/wifi/fwpath
+    rmdir /data/system/wpa_supplicant
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+
+    #to observe dnsmasq.leases file for dhcp information
+    chown dhcp system /data/misc/dhcp
+    setprop wifi.interface wlan0
+    mkdir /data/misc/dhcp6c 0770 dhcp dhcp
+    chown dhcp system /data/misc/dhcp6c
+
+    # Ylog dir on /data partition
+    mkdir /data/vendor 0751 root root
+    mkdir /data/vendor/local 0751 root root
+
+    # slogmodem config dir
+    mkdir /data/vendor/ylog 0770 shell system
+    mkdir /data/vendor/local/slogmodem 0770 shell system
+    mkdir /data/vendor/local/mlogservice 0770 shell system
+    mkdir /mnt/vendor/productinfo 0771 system root
+    mkdir /data/vendor/local/otpdata 0777 system root
+
+on property:ro.debuggable=1
+    write /sys/module/smsg/parameters/debug_enable 1
+
+on property:ro.bootmode=recovery
+    class_start recovery
