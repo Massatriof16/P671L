@@ -163,3 +163,4 @@ tranbootprof.ko
 trans_sched.ko
 omnivision_td4160.ko
 adaptive-ts.ko
+chipone_icnl99xx.ko
