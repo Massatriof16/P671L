@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2019 Unisoc (Shanghai) Technologies Co. Ltd
+SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+-->
+
 <manifest version="1.0" type="device">
     <hal format="aidl">
         <name>android.hardware.radio.config</name>
@@ -108,6 +113,13 @@
             <name>IImsRadio</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.unisoc.hardware.radio.lite</name>
+        <interface>
+            <name>ILiteRadio</name>
+            <instance>liteservice2</instance>
         </interface>
     </hal>
     <hal format="hidl">

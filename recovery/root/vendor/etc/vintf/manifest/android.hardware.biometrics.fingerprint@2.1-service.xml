@@ -1,10 +1,10 @@
 <manifest version="1.0" type="device">
-	<hal format="hidl">
-        <name>vendor.sprd.hardware.tranHwInfo</name>
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.1</version>
         <interface>
-            <name>ITranHwInfo</name>
+            <name>IBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>

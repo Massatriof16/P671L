@@ -1,3 +1,7 @@
+<!--SPDX-FileCopyrightText: 2022 Unisoc (Shanghai) Technologies Co., Ltd
+    SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
+-->
+
 <manifest version="1.0" type="device">
     <hal format="hidl">
         <name>android.hardware.media.c2</name>
