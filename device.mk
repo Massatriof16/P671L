@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client 
@@ -75,6 +76,14 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     libsnapshot
     
+PRODUCT_PACKAGES += \
+    libdm \
+    erofs_utils \
+    fsck.erofs \
+    mkfs.erofs
+
+PRODUCT_PACKAGES += toybox
+
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_TARGET_VNDK_VERSION := 34
