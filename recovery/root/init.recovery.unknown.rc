@@ -8,7 +8,7 @@ start prepdecrypt
 
 on early-init
 exec /system/bin/sh -c "find /sys -name uevent -exec sh -c 'echo add > {}' \;"
-setprop ro.boot.mode recovery
+setprop ro.bootmode recovery
 
 service prepdecrypt /system/bin/prepdecrypt.sh
 oneshot
@@ -70,7 +70,7 @@ user root
 group root system
 disabled
 oneshot
-seclabel u:r:create_spl_link_recovery:s0
+seclabel u:r:recovery:s0
 
 service vendor.mlogservice /vendor/bin/mlogservice
 class main
