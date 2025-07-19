@@ -74,7 +74,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 
 PRODUCT_PACKAGES += \
-    libsnapshot
+    libsnapshot \
+    android.hardware.health-V1-ndk
     
 PRODUCT_PACKAGES += \
     libdm \

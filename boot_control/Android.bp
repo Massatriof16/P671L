@@ -15,7 +15,7 @@
 //
 
 cc_library_shared {
-    name: "bootctrl.ums9230",
+    name: "unisoc.bootctrl",
     recovery_available: true,
     relative_install_path: "hw",
 

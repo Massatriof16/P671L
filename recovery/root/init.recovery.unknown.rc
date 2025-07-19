@@ -6,8 +6,10 @@ on fs
 start prepdecrypt 
 
 
+
+
+
 on early-init
-exec /system/bin/sh -c "find /sys -name uevent -exec sh -c 'echo add > {}' \;"
 setprop ro.bootmode recovery
 
 service prepdecrypt /system/bin/prepdecrypt.sh
