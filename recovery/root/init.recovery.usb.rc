@@ -152,3 +152,7 @@ file /dev/kmsg w
 disabled
 seclabel u:r:recovery:s0
 
+
+on init
+start vendor.sprd.boot-hal-1-2
+start vendor.health-default
