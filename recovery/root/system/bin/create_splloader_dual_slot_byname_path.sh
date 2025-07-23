@@ -1,9 +1,7 @@
 #!/system/bin/sh
-exec /system/bin/sh -c "find /sys -name uevent -exec sh -c 'echo add > {}' \;"
 
 spl_a="0:0:0:1/block"
 spl_b="0:0:0:2/block"
-
 
 ln_number=0
 ln_number_max=2

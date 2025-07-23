@@ -22,12 +22,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
- 
-
-
+ # Boot control HAL
 PRODUCT_PACKAGES += \
-    bootctrl.recovery \
-    unisoc.bootctrl
+    android.hardware.boot@1.0-impl
+
 
 
 PRODUCT_PACKAGES += \

@@ -2,23 +2,6 @@
 import /init.recovery.common.rc
 
 
-on fs
-start prepdecrypt 
-
-
-
-
-
-on early-init
-setprop ro.bootmode recovery
-
-service prepdecrypt /system/bin/prepdecrypt.sh
-oneshot
-disabled
-user root
-group root
-seclabel u:r:recovery:s0
-
 service keystore2 /system/bin/keystore2 /data/misc/keystore
 user root
 group root
@@ -57,10 +40,14 @@ on boot
 #install_keyring
 start keymint-2-0
 start gatekeeper-1-0
-start boot-hal-1-2
 start health-hal-2-1
-
- 
+setprop sys.usb.config adb
+write /sys/class/android_usb/android0/enable 1
+write /sys/class/android_usb/android0/functions adb
+setprop sys.usb.state adb
+setprop sys.usb.ffs.ready 1
+setprop persist.sys.usb.config adb
+setprop sys.usb.configfs 1
  #### THIS IS FROM INIT RECOVERY COMMMON
 
 service healthd /system/bin/healthd -r
@@ -78,7 +65,7 @@ service vendor.mlogservice /vendor/bin/mlogservice
 class main
 user shell
 group system root
-
+seclabel u:r:recovery:s0
 
 on init
 # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
@@ -163,4 +150,7 @@ on property:ro.debuggable=1
 write /sys/module/smsg/parameters/debug_enable 1
 
 on property:ro.bootmode=recovery
+class_start recovery
+
+on property:ro.bootmode=unknown
 class_start recovery
