@@ -6,7 +6,7 @@
 #
 DEVICE_PATH := device/itel/P671L
 
-TARGET_NO_KERNEL := true
+
 # For building with minimal manifest
 
 # Build Hack
@@ -16,7 +16,7 @@ BUILD_BROKEN_DUP_RULES := true
 ALLOW_MISSING_DEPENDENCIES := true
 
 TW_LOAD_VENDOR_MODULES := "omnivision_td4160.ko chipone_icnl99xx.ko adaptive-ts.ko"
-TW_LOAD_VENDOR_BOOT_MODULES := true
+
 
 
 # A/B
@@ -61,8 +61,7 @@ TARGET_BOOTLOADER_BOARD_NAME := itel-P671L
 
 
 # Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
+
 TARGET_NO_KERNEL := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_SEPARATED_DTBO := true

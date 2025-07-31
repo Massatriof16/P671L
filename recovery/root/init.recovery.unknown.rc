@@ -143,8 +143,3 @@ mkdir /data/vendor/local/otpdata 0777 system root
 on property:ro.debuggable=1
 write /sys/module/smsg/parameters/debug_enable 1
 
-on property:ro.bootmode=recovery
-class_start recovery
-
-on property:ro.bootmode=unknown
-class_start recovery
