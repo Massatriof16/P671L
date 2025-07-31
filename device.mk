@@ -16,28 +16,24 @@
 
 LOCAL_PATH := device/itel/P671L
 
+# Virtual A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
- # Boot control HAL
+# Health
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl
-
-
-
-PRODUCT_PACKAGES += \
-    bootctrl.ums9230
-    
-ENABLE_VIRTUAL_AB := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client 
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -46,32 +42,9 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-
-# Dynamic partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-
+#fastboot
 PRODUCT_PACKAGES += \
-    libsnapshot \
-    android.hardware.health-V1-ndk
-    
-PRODUCT_PACKAGES += \
-    libdm \
-    erofs_utils \
-    fsck.erofs \
-    mkfs.erofs
-
-PRODUCT_PACKAGES += toybox
-
-# VNDK
-PRODUCT_SHIPPING_API_LEVEL := 33
-PRODUCT_TARGET_VNDK_VERSION := 34
-
-# A/B
-
-PRODUCT_ENABLE_UFFD_GC := true
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
-
-PRODUCT_PACKAGES += \
+    libion.recovery \
     android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+	fastbootd

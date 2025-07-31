@@ -41,13 +41,7 @@ on boot
 start keymint-2-0
 start gatekeeper-1-0
 start health-hal-2-1
-setprop sys.usb.config adb
-write /sys/class/android_usb/android0/enable 1
-write /sys/class/android_usb/android0/functions adb
-setprop sys.usb.state adb
-setprop sys.usb.ffs.ready 1
-setprop persist.sys.usb.config adb
-setprop sys.usb.configfs 1
+
  #### THIS IS FROM INIT RECOVERY COMMMON
 
 service healthd /system/bin/healthd -r
