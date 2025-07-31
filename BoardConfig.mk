@@ -80,8 +80,8 @@ BOARD_BOOT_HEADER_VERSION := 4
 BOARD_DTB_SIZE := 122678
 BOARD_DTB_OFFSET := 0x01f00000
 BOARD_HEADER_SIZE := 2128
-BOARD_VENDOR_CMDLINE := console=ttyS1,115200n8 
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_VENDOR_CMDLINE := console=ttyS1,115200n8 androidboot.selinux androidboot.selinux=permissive
+#BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline $(BOARD_VENDOR_CMDLINE)
