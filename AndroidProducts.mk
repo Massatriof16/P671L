@@ -9,4 +9,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_P671L.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_P671L-eng
+    twrp_P671L-eng \
+    twrp_P671L-userdebug
+    
